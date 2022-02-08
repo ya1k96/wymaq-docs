@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { ChakraProvider } from '@chakra-ui/react'
+import SimpleSidebar from './components/common/sidebar';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider>
+      <SimpleSidebar>
+        <App />
+      </SimpleSidebar>
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
